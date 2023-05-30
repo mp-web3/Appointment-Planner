@@ -11,12 +11,12 @@ export const ContactForm = ({
 }) => {
   return (
     <>
-    <form onSubmit={handleSubmit}>
-      <input type="text" value={name} onChange={e => setName(e.target.value)} required/>
-      <input type="tel" /*pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"*/ value={phone} onChange={e => setPhone(e.target.value)} required/>
-      <input type="email" value={email} onChange={e => setEmail(e.target.value)} required/>
-      <input type="submit"/>
-    </form>
+      <form onSubmit={handleSubmit}>
+        <input type="text" value={name} onChange={e => setName(e.target.value)} required/>
+        <input type="tel" /*pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"*/ value={phone} onChange={e => setPhone(e.target.value)} required/>
+        <input type="email" value={email} onChange={e => setEmail(e.target.value)} required/>
+        <input type="submit"/>
+      </form>
     </>
   );
 };

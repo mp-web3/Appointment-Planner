@@ -21,8 +21,8 @@ function App() {
     setContacts(prev => [...prev, {name, phone, email}]);
   };
 
-  const addAppointment = (name, contact, date, time) => {
-    setAppointments(prev => [...prev, {name, contact, date, time}]);
+  const addAppointment = (title, contact, date, time) => {
+    setAppointments(prev => [...prev, {title, contact, date, time}]);
   };
 
   const router = createBrowserRouter(createRoutesFromElements(
