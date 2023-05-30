@@ -9,8 +9,8 @@ function App() {
   Define state variables for 
   contacts and appointments 
   */
-  const [ contacts, setContacts ] = useState([{}]);
-  const [ appointments, setAppointments ] = useState([{}]);
+  const [ contacts, setContacts ] = useState([]);
+  const [ appointments, setAppointments ] = useState([]);
 
   /*
   Implement functions to add data to
@@ -29,9 +29,11 @@ function App() {
     <Route path="/" element={ <Root/> }>
       <Route index element={ <Navigate to={ROUTES.CONTACTS} replace/> }/>
       <Route path={ROUTES.CONTACTS} element={ <ContactsPage contacts={contacts} addContact={addContact}/> }/>
-      <Route path={ROUTES.APPOINTMENTS} element={ <AppointmentsPage appointments={appointments} addAppointment={addAppointment}/> }/>
+      <Route path={ROUTES.APPOINTMENTS} element={ <AppointmentsPage contacts={contacts} appointments={appointments} addAppointment={addAppointment}/> }/>
     </Route>
   ));
+
+  console.log("App.js contacts:", contacts);
   
   return (
     <RouterProvider router={router}/>

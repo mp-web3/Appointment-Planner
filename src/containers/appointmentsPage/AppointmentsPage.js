@@ -4,6 +4,9 @@ import { AppointmentForm } from "../../components/appointmentForm/AppointmentFor
 import { TileList } from "../../components/tileList/TileList";
 
 export const AppointmentsPage = ({ appointments, contacts, addAppointment }) => {
+
+  console.log("AppointmentsPage contacts:", contacts);
+
   /*
   Define state variables for 
   appointment info
@@ -39,6 +42,7 @@ export const AppointmentsPage = ({ appointments, contacts, addAppointment }) => 
         time={time}
         setTime={setTime}
         handleSubmit={handleSubmit}
+        contacts={contacts}
         />
       </section>
       <hr />
